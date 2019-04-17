@@ -1,4 +1,8 @@
-<!doctype html>
+<?php
+// start de session
+require_once '../../session.inc.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
 	<title>Lid Toevoegen</title>
@@ -26,6 +30,7 @@
                 <input type="radio" name="gender" id="gender_m" value="M" checked="checked">
                 Man
 			</label>
+            <br>
             <label>
                 <input type="radio" name="gender" id="gender_f" value="F" checked="checked">
                 Vrouw

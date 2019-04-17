@@ -1,4 +1,7 @@
 <?php
+// start de session
+require_once '../../session.inc.php';
+
 // lees de config bestand in de pagina
 require_once '../../config.inc.php';
 
@@ -38,7 +41,7 @@ if (strlen($first_name)     > 0 &&
             // controleer het resultaat
             if ($result) {
                 // alles OK, stuur terug naar de homepage
-                header("Location:../../../index.php");
+                header("Location:../../../homepage.php");
                 exit;
             } else {
                 echo 'Er is iets mis gegaan bij het toevoegen!';
