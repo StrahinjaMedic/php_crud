@@ -33,30 +33,33 @@ if(is_numeric($id)) {
 	<title>Lid Bewerken</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-	<h1>lid Bewerken</h1>
+    <div class="container">
 
+	<h1>lid Bewerken</h1>
+    <br>
 	<form action="lid_bewerk_verwerk.php" method="post">
 
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-        <p>
+        <div class="form-group">
             <label for="first_name">Voornaam:</label>
-            <input type="text" name="first_name" id="first_name" required="required" 
+            <input type="text" class="form-control" name="first_name" id="first_name" required="required" 
             value="<?php echo $data['first_name'];?>">
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
             <label for="last_name">Achternaam:</label>
-            <input type="text" name="last_name" id="last_name" required="required" 
+            <input type="text" class="form-control" name="last_name" id="last_name" required="required" 
             value="<?php echo $data['last_name'];?>">
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
             <label for="birth_date">Geboortedatum:</label>
-            <input type="date" name="birth_date" id="birth_date" required="required" 
+            <input type="date" class="form-control" name="birth_date" id="birth_date" required="required" 
             value="<?php echo $data['birth_date'];?>">
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
 			<label>
                 <input type="radio" name="gender" id="gender_m" value="M" 
                 <?php if ($data['gender'] == 'M') echo 'checked="checked"';?>>
@@ -68,16 +71,17 @@ if(is_numeric($id)) {
                 <?php if ($data['gender'] == 'F') echo 'checked="checked"';?>>
                 Vrouw
 			</label>
-		</p>
-        <p>
+        </div>
+        <div class="form-group">
             <label for="member_since">Lid sinds:</label>
-            <input type="date" name="member_since" id="member_since" required="required" 
+            <input type="date" class="form-control" name="member_since" id="member_since" required="required" 
             value="<?php echo $data['member_since'];?>">
-        </p>
-        <p>
-            <input type="submit" name="submit" id="submit" value="Opslaan">
-            <button onClick="history.back();return false;">Annuleren</button>
-        </p>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-dark" name="submit" id="submit" value="Opslaan">
+            <button onClick="history.back();return false;" class="btn btn-dark">Annuleren</button>
+        </div>
 	</form>
+    </div>
   </body>
 </html>

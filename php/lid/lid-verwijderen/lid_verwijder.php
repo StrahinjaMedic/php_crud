@@ -29,23 +29,29 @@ if(is_numeric($id)) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<title>Lid Verwijderen</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
-	<h1>lid Verwijderen</h1>
 
-    <p>
-        Weet je zeker dat je het lid
-        <strong><?php echo $data['first_name'] . " " . $data['last_name'];?></strong>
-        wilt verwijderen?
-    </p>
-    <p>
-        <a href="lid_verwijder_verwerk.php?id=<?php echo $id; ?>">Ja, verwijderen</a>
-        /
-        <a href="../../../homepage.php">Nee, terug</a>
-    </p>
-  </body>
+<head>
+    <title>Lid Verwijderen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>lid Verwijderen</h1>
+        <br>
+        <div>
+            Weet je zeker dat je het lid
+            <strong><?php echo $data['first_name'] . " " . $data['last_name'];?></strong>
+            wilt verwijderen?
+        </div>
+        <div>
+            <a href="lid_verwijder_verwerk.php?id=<?php echo $id; ?>">Ja, verwijderen</a>
+            /
+            <a href="../../../homepage.php">Nee, terug</a>
+        </div>
+    </div>
+</body>
+
 </html>
