@@ -14,7 +14,7 @@
         <br>
         <form action="php/login/login.php" method="post">
             <div class="form-group">
-                <label for="username">Email:</label>
+                <label for="username">Username:</label>
                 <input type="text" class="form-control" id="username" placeholder="Vul hier uw username in" name="username">
             </div>
             <div class="form-group">
